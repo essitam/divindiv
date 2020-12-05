@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Increasing and Decreasing Image Size</title>
+<style type="text/css">
+	#colorblock {
+		width: 300px;
+		height: 300px;
+		float: left;
+		background-color: cornflowerblue;
+		-webkit-transition: width 3s; /* Safari */
+    -webkit-transition-timing-function: ease; /* Safari */
+    transition: width 3s;
+    transition-timing-function: ease;
+		
+	}
+	
+	#colorblock2 {
+		width: 100px;
+		height: 300px;
+		float: left;
+		background-color: orange;
+		-webkit-transition: width 3s; /* Safari */
+    -webkit-transition-timing-function: ease; /* Safari */
+    transition: width 3s;
+    transition-timing-function: ease;
+		
+	}
+	
+    button{
+        padding: 3px 6px;
+    }
+    button img{
+        vertical-align: middle;
+    }
+</style>
+
+
+<script type="text/javascript">
+    function zoomin(){
+        var myImg = document.getElementById("colorblock");
+        var currWidth = myImg.clientWidth;
+        if(currWidth == 800){
+            alert("Maximum zoom-in level reached.");
+        } else{
+            myImg.style.width = (currWidth + 150) + "px";
+        } 
+		
+		
+		var myImg2 = document.getElementById("colorblock2");
+        var currWidth2 = myImg.clientWidth;
+        if(currWidth2 == 800){
+            alert("Maximum zoom-out level reached.");
+        } else{
+            myImg2.style.width = (currWidth2 - 100) + "px";
+        }
+		
+    }
+    function zoomout(){
+        var myImg = document.getElementById("colorblock");
+        var currWidth = myImg.clientWidth;
+        if(currWidth == 800){
+            alert("Maximum zoom-out level reached.");
+        } else{
+            myImg.style.width = (currWidth - 100) + "px";
+        }
+		
+		
+		var myImg2 = document.getElementById("colorblock2");
+        var currWidth2 = myImg.clientWidth;
+        if(currWidth2 == 50){
+            alert("Maximum zoom-out level reached.");
+        } else{
+            myImg2.style.width = (currWidth2 + 150) + "px";
+        }
+    }
+</script>
+</head>
+<body>
+    <p>
+        
+    </p>
+	<div id="colorblock" onclick="zoomin()"></div>
+	<div id="colorblock2" onclick="zoomout()"></div>
+</body>
+</html>                            

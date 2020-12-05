@@ -1,0 +1,161 @@
+<html>
+<head>
+	<title>Exploding Text</title>
+	<style type="text/css">
+		html, body {
+		    margin: 0;
+		    padding: 0;
+		    height: 100%;
+		}    
+		canvas {
+		    margin: auto;
+		}
+		#word-canvas {
+		    display: none;
+		}
+	</style>
+</head>
+<body>
+hello
+	<canvas id="main-canvas"></canvas>
+	<canvas id="word-canvas"></canvas>
+
+	<script type="text/javascript">
+	/*
+	1. Draw some text on wordCanvas (which is never actually shown).
+	2. Get the image data of that canvas.
+	3. Look through the data for the coordinates of all the non-transparent pixels.
+	4. For every (or every e.g. 5th, for performance reasons) non-transparent pixel, add a new particle to the particle array with the same coordinates as that pixel.
+	5. Draw the particles on the mainCanvas - and they spell out the text!  Then you can animate them however you want.
+	*/
+	// canvases and contexts
+	var mainCanvas = document.getElementById('main-canvas');
+	var mainCtx = mainCanvas.getContext('2d');
+	var wordCanvas = document.getElementById('word-canvas');
+	var wordCtx = wordCanvas.getContext('2d');
+	var clientWidth = document.body.clientWidth;
+	var clientHeight = document.body.clientHeight;
+	wordCanvas.width = clientWidth;
+	wordCanvas.height = clientHeight;
+	mainCanvas.width = clientWidth;
+	mainCanvas.height = clientHeight;
+	var particles = [];
+	function Particle(x, y) {
+	    // Particle pic
+	    this.img = new Image();
+	    this.img.src = 'http://docs.garagegames.com/torquex/official/content/documentation/TorqueX%202D/Editors/images/TorqueX_Particle_Effect_Guide_candle.png';
+	    // start coords
+	    this.x1 = x;
+	    this.y1 = y;
+	    this.originX = x;
+	    this.originY = y;
+	    
+	    // target coords
+	    this.x2 = Math.random() * mainCanvas.width;
+	    this.y2 = Math.random() * mainCanvas.height;
+	    
+	    // velocities
+	    this.velocityX = Math.random() * 8 - 5;
+	    this.velocityY = Math.random() * 8 - 5;
+	    this.crawlVelocityX = this.velocityX * 0.05;
+	    this.crawlVelocityY = this.velocityY * 0.05;
+	    // 5. Draw the particles on the mainCanvas - and they spell out the text!  Then you can animate them however you want.
+	    this.draw = function() {
+	        mainCtx.drawImage(this.img, this.x1, this.y1, 5, 5);
+	    }
+	    this.crawl = function() {
+	        
+	        var limitX = 5;
+	        var limitY = 5;
+	        this.x1 += this.crawlVelocityX;
+	        this.y1 += this.crawlVelocityY;
+	        if (this.x1 >= this.originX + limitX || this.x1 <= this.originX - limitX) {
+	            this.crawlVelocityX *= -1;
+	        }
+	        if (this.y1 >= this.originY + limitY || this.y1 <= this.originY - limitY) {
+	            this.crawlVelocityY *= -1;
+	        }
+	    }
+	    this.explode = function() {
+	        // pythag
+	        var dx = this.x1 - this.x2;
+	        var dy = this.y1 - this.y2;
+	        var distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+	        var force = distance * 0.00015;
+	        var angle = Math.atan2(dy, dx);
+	        
+	        // reverse their direction when they stop - means that they'll eventually reform the text
+	        this.velocityX -= force * Math.cos(angle);
+	        this.velocityY -= force * Math.sin(angle);
+	        
+	        this.x1 += this.velocityX;
+	        this.y1 += this.velocityY;
+	    }
+	}
+	// 1. Draw some text on wordCanvas (which is never actually shown).
+	function drawText(text, ctx) {
+	    var text = text;
+	    var fontSize = 60;
+	    ctx.font = fontSize + "px sans-serif";
+	    ctx.clearRect(0, 0, clientWidth, clientHeight);
+	    ctx.textAlign = "center";
+	    ctx.textBaseline = "middle";
+	    for (var i = 0; i < text.length; i++) {
+	        ctx.fillStyle = "black";
+	        ctx.fillText(text[i], clientWidth / 2 - (fontSize * 2/3) * (text.length / 2 - (i + 0.5)), clientHeight / 2);
+	    }
+	}
+	// 2. Get the image data of that canvas.
+	function getPixels(ctx) {
+	    // The getImageData() method returns an ImageData object that copies the pixel data for the specified rectangle on a canvas.
+	    var imageData = ctx.getImageData(0, 0, clientWidth, clientHeight);
+	    // 3. Look through the data for the coordinates of all the non-transparent pixels.
+	    for (var x = 0; x < imageData.width; x += 1) {
+	        for (var y = 0; y < imageData.height; y += 1) {
+	            // each pixel has 4 separate indexes associated with it
+	            // e.g. [0], [1], [2], [3] - all about first pixel 
+	            // this works for first row
+	            // (x * 4) -> (x * 4) + 3;
+	            // then have to add width * how many widths - value is same as y
+	            var i = (y * imageData.width + x) * 4;
+	            // check alpha transparency
+	            if (imageData.data[i + 3] > 128) {  
+	                // 4. For every (or every e.g. 5th, for performance reasons) non-transparent pixel, add a new particle to the particles array with the same coordinates as that pixel.
+	                if (x % 5 === 0) {
+	                      particles.push(new Particle(x, y)); 
+	                }
+	            }
+	        }
+	    }
+	}
+	function crawl() {
+	    for(var i = 0; i < particles.length; i++) {        
+	        particles[i].draw();
+	        particles[i].crawl();
+	    }
+	}
+	function explode() {
+	    for(var i=0; i < particles.length; i++) {
+	        particles[i].draw();
+	        particles[i].explode();
+	    }
+	}
+	function animate() {
+	    mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+	    if (exploding) {
+	        explode();
+	    } else {
+	        crawl();
+	    }
+	    requestAnimationFrame(animate);
+	}
+	drawText("Hello", wordCtx);
+	getPixels(wordCtx);
+	animate();
+	var exploding = false;
+	setTimeout(function() {
+	    exploding = true;    
+	}, 5000);
+	</script>
+</body>
+</html>

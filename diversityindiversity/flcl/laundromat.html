@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FLCL</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    
+     <script>
+  
+
+function flash(el, c1, c2) {
+    var text = document.getElementById(el);
+    text.style.color = (text.style.color == c2) ? c1 : c2;
+}
+var clr1 = setInterval(function() {
+    flash('foo1', 'black', 'red')
+}, 1000);
+var clr2 = setInterval(function() {
+    flash('foo2', 'red', 'black')
+}, 1000);
+var clr3 = setInterval(function() {
+    flash('foo3', 'gray', 'green')
+}, 1000);
+
+</script>
+    
+    
+    
+  </head>
+  <body bgcolor='black'> 
+  
+<iframe width="0" height="0" src="https://www.youtube.com/embed/qMQJF-7Y2h0?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p align ='center' id="foo1">coming soon</p>
+<p align ='center' id="foo2">laundromat & cat cafe</p>
+
+    
+    <p style="text-align:center;">
+    <img src="chair.jpg" width="1184" height="736">
+  
+</p>
+
+<p align='center'> 
+<a href="isoutthere.gif" target='blank'>
+<svg width="100" height="100">
+  <circle cx="24" cy="24" r="24" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</a>
+</p>
+
+
+    
+  </body>
+</html>

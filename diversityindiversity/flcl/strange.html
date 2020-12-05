@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The web site of flcl</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <script>
+    $('#test').click(function() {
+    var docHeight = $(document).height(),
+        docWidth = $(document).width(),
+        $div = $('#test'),
+        divWidth = $div.width(),
+        divHeight = $div.height(),
+        heightMax = docHeight - divHeight,
+        widthMax = docWidth - divWidth;
+
+    $div.css({
+        left: Math.floor( Math.random() * widthMax ),
+        top: Math.floor( Math.random() * heightMax )
+    });
+});
+</script>
+    <style>
+    #test {
+    position:absolute;
+    width:100px;
+    height:70px;
+    background-color:#d2fcd9;
+}
+    
+    div {
+      font-family: 'PT Sans', sans-serif;
+	font-weight: 700;
+	font-size: 45px;
+font-family:'MetaCompPro-Medium W01 Regular';
+color:#FFF;
+line-height:1;
+text-transform:uppercase;
+margin-bottom:5px;
+-webkit-animation: color-change 1s infinite;
+    -moz-animation: color-change 1s infinite;
+    -o-animation: color-change 1s infinite;
+    -ms-animation: color-change 1s infinite;
+    animation: color-change 1s infinite;"
+    }
+    
+    body.ru #section0 h2 {
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 700;
+	}
+body.ru #section0 h3 {
+font-family: 'PT Sans', sans-serif;
+font-weight: 700;
+}
+#section0 h2 {
+font-family:"MetaCompPro-Medium W01 Regular";
+font-size:3em;
+line-height: 1.1;
+margin-bottom: 5px;
+color:#FFF;
+-webkit-animation: color-change 1s infinite;
+    -moz-animation: color-change 1s infinite;
+    -o-animation: color-change 1s infinite;
+    -ms-animation: color-change 1s infinite;
+    animation: color-change 1s infinite;
+}
+.underline {
+	border-bottom: solid 2px #000;
+}
+.intro p{
+padding:40px 0 0 0;
+}
+::selection {
+  background: #000; /* WebKit/Blink Browsers */
+  color:#FFF;
+}
+::-moz-selection {
+  background: #000; /* Gecko Browsers */
+  color:#FFF;
+}
+#section0 h3 {
+font-family:"Meta Serif Offc W01 Medium";
+font-size:2em;
+line-height: 1.15;
+color:#FFF;
+-webkit-animation: color-change2 0.2s infinite;
+    -moz-animation: color-change2 0.2s infinite;
+    -o-animation: color-change2 0.2s infinite;
+    -ms-animation: color-change2 0.23s infinite;
+    animation: color-change2 0.2s infinite;
+
+}
+@-webkit-keyframes color-change {
+    0% { color: #000; }
+    20% { color: #FF00FF; }
+    70% { color: #FE9A2E; }
+	100% { color: #000; }
+}
+@-moz-keyframes color-change {
+    0% { color: #000; }
+    20% { color: #FF00FF; }
+    70% { color: #FE9A2E; }
+	100% { color: #000; }
+}
+@-ms-keyframes color-change {
+    0% { color: #000; }
+    20% { color: #FF00FF; }
+    70% { color: #FE9A2E; }
+	100% { color: #000; }
+}
+@-o-keyframes color-change {
+    0% { color: #000; }
+    20% { color: #FF00FF; }
+    70% { color: #FE9A2E; }
+	100% { color: #000; }
+}
+@keyframes color-change {
+    0% { color: #000; }
+    20% { color: #FF00FF; }
+    70% { color: #FE9A2E; }
+	100% { color: #000; }
+}
+
+
+
+
+@-webkit-keyframes color-change2 {
+    0% { color: #000; }
+    10% { color: #FF00FF; }
+    80% { color: #FF00FF; }
+	100% { color: #000; }
+}
+@-moz-keyframes color-change2 {
+    0% { color: #000; }
+    10% { color: #FF00FF; }
+    80% { color: #FF00FF; }
+	100% { color: #000; }
+}
+@-ms-keyframes color-change2 {
+    0% { color: #000; }
+    10% { color: #FF00FF; }
+    80% { color: #FF00FF; }
+	100% { color: #000; }
+}
+@-o-keyframes color-change2 {
+    0% { color: #000; }
+    10% { color: #FF00FF; }
+    80% { color: #FF00FF; }
+	100% { color: #000; }
+}
+@keyframes color-change2 {
+    0% { color: #000; }
+    10% { color: #FF00FF; }
+    80% { color: #FF00FF; }
+}
+    </style>
+  </head>
+  <body style="background: url(Black%20Hole.gif);
+    background-repeat: no-repeat;
+    background-size: cover;">
+    
+
+	<div align='center'>STRANGER EVENTS</p>
+
+<a style="display: block; width: 10px; height: 10px; background-color: grey;" href="javascript:window.open('strange1.html','strange','width=500,height=500')"></a>
+<a style="display: block; width: 10px; height: 10px; background-color: blue;" href="javascript:window.open('strange2.html','strange','width=500,height=500')"></a>
+<a style="display: block; width: 10px; height: 10px; background-color: red;" href="javascript:window.open('strange3.html','strange','width=500,height=500')"></a>
+        
+  </body>
+</html>

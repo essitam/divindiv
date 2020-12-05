@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The web site of flcl</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+* { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+.vid-info { position: absolute; top: 100px; right: 100px; width: 45%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+</style>
+  </head>
+  <body>
+
+<div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/Xm5RuYZ9OAk?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=Xm5RuYZ9OAk" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+<div id="vidtop-content">
+<div class="vid-info">
+	  <h1>What Remains Haunting</h1>
+	  <p>Something keeps lingering in True Detective (2014) after the case has finally been resolved. It is something beyond the murders, beyond the abuse of young girls, beyond the dark side of faith and the men that populate it. Beyond, in the sense that it makes all these happenings possible. What keeps lingering is that which is impossible to solve.
+
+<p>In the final scenes of the series, which are mostly dialogues between Marty and Rust, there is one particular scene that is out of the ordinary, simply out of place. Just after Rust has woken up, in what becomes already an unusual display of friendship between him and Marty, there is an extended, suspended scene that glides out from the hospital onto the lands where the atrocities took place. A sort of tracing of what was there, and how it still is there.
+
+<p>At this point, with the killer caught and the case basically closed, such a shot could move into the future and assess how things are then. In this case it would show how things have changed and in such affirm the ending of the story. It would establish the on going of the lands, ever changing while human atrocities keep on going.
+
+<p>But the scene does not give us changed landscapes, rather they are still exactly the same. Moreover, the landscapes that are being shown are going further than those where the events took place. From the hospital to the house of …, to the marshes, to the houses on the river, and finally a tree in the middle of a field (which could well be the tree the initial victim was found at, this is unclear at this point.) While certain of these shots do help to establish a relation to a location of what happened, as the camera glides over it also takes in far more than the assessment of these happenings.
+
+<p>Rust was, throughout the entire series, continuously the one that would remark the different tastes of the locations. For Rust, it was not a matter of establishes locations as knowns, it was a matter of feeling them, tasting them. Arriving at the final scene, when Marty and Rust stumble upon the house of … and here eventually manage to end it, Rust will immediately remark ‘I’m tasting copper and iron. This is the place.’
+
+<p>What Rust tastes and what this suspended scene traces, is then not so much the recognition of what the different locations harbor (be it as their flipside, be it is inherent to them). Rather Rust intuits the atmosphere that fills these places. The atmosphere is more than spatial location and more than the abstract recognition. The atmosphere gives sense of what is continuously and always left out in the apprehension of these places and what populates them. The atmosphere marks a spectral quality, one that haunts these lands and by virtue of its force makes possible what happens there.
+
+
+  </div>
+</div>
+
+  </body>
+</html>

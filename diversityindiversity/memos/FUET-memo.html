@@ -1,0 +1,384 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta content="Fuet Memo">
+<style>
+
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Lato;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Indie Flower";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p, li, div
+	{margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{margin-top:20.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:normal;}
+h2
+	{margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:normal;}
+h3
+	{margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:#434343;
+	font-weight:normal;}
+h4
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;
+	font-weight:normal;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;
+	font-weight:normal;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:26.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:16.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:15.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+.MsoChpDefault
+	{font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+.MsoPapDefault
+	{line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+
+  .fuet {
+   margin-left: 25%;
+   margin-right: 25%;
+  }
+
+</style>
+
+<script>
+var x = document.getElementById("myDIV");
+
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display == "block") {
+      x.style.display = "none";
+  } else {
+      x.style.display = "block";
+  }
+}
+
+
+var newsrc = "peels/peel1.png";
+
+function changeImage() {
+if ( newsrc == "peels/peel1.png" ) {
+document.images["rr"].src = "peels/peel1.png";
+document.images["rr"].alt = "Peel";
+newsrc  = "oranges/orange2.png";
+}
+else {
+document.images["rr"].src = "oranges/orange2.png";
+document.images["rr"].alt = "Orange";
+newsrc  = "peels/peel1.png";
+}
+}
+
+</script>
+<script src="d3.v4.min.js"></script>
+<script src="js/soundbutton.js"></script>
+<script src="js/keyplay.js"></script>
+<script src="js/peel.js"></script>
+<link rel="stylesheet" type="text/css" href="css/soundbuttonrand.css">
+
+</head>
+
+<body bgcolor=black -US>
+<div class="fuet">
+<div class="topleft" onclick="myFunction(); changeImage();"><img id="rr" src="oranges/orange2.png" height="50" width="50"></div>
+
+<div id="myDIV">
+<div class="random" id="r1"><a href="http://inflexions.org/diversityindiversity/spaze3.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+<div class="random" id="r2"><a href="http://inflexions.org/diversityindiversity/memos/exploding-plastic-hands.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r3"><a href="http://inflexions.org/diversityindiversity/memos/fabulation-and-fake-news.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r4"><a href="http://inflexions.org/diversityindiversity/memos/nemo-memo.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+<div class="random" id="r5"><a href="http://inflexions.org/diversityindiversity/memos/izsafe.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+<div class="random" id="r6"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r7"><a href="http://inflexions.org/diversityindiversity/memos/sparks-memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r8"><a href="http://inflexions.org/diversityindiversity/memos/video_2_2.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+<div class="random" id="r9"><a href="http://inflexions.org/diversityindiversity/memos/zlip.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+<div class="random" id="r10"><a href="http://inflexions.org/diversityindiversity/memos/howtodiis4ppearcompletely0.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r11"><a href="http://inflexions.org/diversityindiversity/memos/orange.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r12"><a href="http://inflexions.org/diversityindiversity/memos/sparks-memo.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+<div class="random" id="r14 r"><a href="http://inflexions.org/diversityindiversity/memos/o%C9%AF%C7%9D%C9%AF%20pl%C9%B9o%CA%8D%20p%C7%9D%CA%87%C9%B9%C7%9D%CA%8Cu%E1%B4%89%20pu%C9%90%20uo%E1%B4%89%CA%87%C9%94%E1%B4%89%C9%9F%20%C7%9D%CA%8C%E1%B4%89%CA%87%C9%90ln%C9%94%C7%9Dds%20%C9%90.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r15 r"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r16 r"><a href="http://inflexions.org/diversityindiversity/memos/so-fa_bulouss.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+</div>
+<div WordSection1>
+
+<p align=center style='text-align:center'><span
+style='font-size:9.0pt;line-height:115%;background:#F4CCCC'>you are kindly
+invited to ʇᴉpǝ the memo of </span></p>
+
+<p align=center style='text-align:center'><span
+style='font-size:9.0pt;line-height:115%;background:#F4CCCC'>&nbsp;</span></p>
+
+<p align=center style='text-align:center'><span
+style='font-size:30.0pt;line-height:115%;font-family:"Indie Flower";background:
+#F4CCCC'>FUET</span><span  style='font-family:Lato'> </span></p>
+
+<p><span >&nbsp;</span></p>
+
+<p align=right style='text-align:right'><span
+style='font-family:"Indie Flower";color:#F4CCCC'>fabulatory unit for emergency
+times </span></p>
+
+<p><span ><img width=468 height=313 id=image14.jpg
+src="FUET-memo.fld/image001.jpg"></span></p>
+
+<p align=right style='text-align:right'><span
+style='color:white'>&nbsp;</span></p>
+
+<p><b><span  style='color:#F4CCCC'>a campaign to re-open
+the </span><span  style='color:#F1F4E9'>z</span><span
+style='color:#F4CCCC'>-</span><span  style='color:#ECF4E9'>f</span><span
+ style='color:#F4CCCC'>iles </span></b></p>
+
+<p><span  style='color:#F4CCCC'>modes of participation
+that are not mandatory or mutual exclusive but that work by anarchival traces
+left behind (and forward). non-linguistic participation. </span></p>
+
+<p><span  style='color:#F4CCCC'>mandatory one-kind-only
+exclusive participation belongs to the realm of the mutual exclusive politics</span></p>
+
+<p><span  style='color:#F4CCCC'>invisible action is
+action</span><span  style='color:white'> <img width=48 height=32
+src="FUET-memo.fld/image002.jpg" alt="tiny "></span></p>
+
+<p><span  style='color:#F4CCCC'>affectivism</span></p>
+
+<p><span  style='color:#F4CCCC'>neurodiverse modes of
+entrance (and exit) to emergency or mourning situations.</span></p>
+
+<p><span  style='color:#F4CCCC'>&nbsp;</span></p>
+
+<p align=center style='text-align:center'><span
+style='color:#F4CCCC'>&quot;we must become atmosphere's speculative
+scientists&quot; (edward g. robinson)</span></p>
+
+<p><span ><img width=468 height=263 id=image10.jpg
+src="FUET-memo.fld/image003.jpg"></span></p>
+
+<p><span >&nbsp;</span></p>
+
+<p style='text-align:justify'><span  style='color:#F4CCCC'>“the
+political animal does not recognize any rigid opposition between the frivolous
+and the serious, which is to say, between the enthusiastic expenditure of
+creative energies and the anchor of function and utility. It nourishes itself
+on the productive paradox of their processual alliance. Nonnormative
+ethico-aesthetics resists, with bursts of supernormal propulsion, the leaden
+demands, so frequently heard, that one’s actions be “relevant” at all cost and
+that they “contribute to society” in a way that is already recognizable. The
+animal politics of education seriously needs to play on such demands.” <img
+width=21 height=21 id=image15.png src="FUET-memo.fld/image004.jpg"></span></p>
+
+<p><span  style='color:#F4CCCC'>&nbsp;</span></p>
+
+<p style = text-align:justify><img width=60 height=60
+src="FUET-memo.fld/image005.jpg" align=left hspace=12 vspace=12 alt=traces></p>
+
+<p align = center, style='text-align:center'><i><span
+style='font-size:10.0pt;line-height:115%;color:#F4CCCC'>jouer est la médecine</span></i><span
+><br clear=all style='page-break-before:always'>
+</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>case: how to enter like a cat</span><img width=250 height=167
+src="FUET-memo.fld/image006.jpg" align=left hspace=12 vspace=12></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>brush up on the walls</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>zig zag across the path</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>brush along on people and things</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>intuit towards warm spots</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>Intuit towards foregrounded things</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>glide over things</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>purr with pleasant things</span></p>
+
+<span  style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>case: how to hang like a capybara</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>sit</span></p>
+
+<p><img width=372 height=58 src="FUET-memo.fld/image007.jpg"
+align=left hspace=12 vspace=12></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+<p><span  style='font-size:10.0pt;line-height:115%;
+color:#F4CCCC'>&nbsp;</span></p>
+
+</div>
+</div>
+</body>
+
+</html>

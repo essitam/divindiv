@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<style>
+	
+	
+	
+</style>
+	
+<script>
+	
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function setRandomColor() {
+  $("#colorpad").css("background-color", getRandomColor());
+	$("#colorpad2").css("background-color", getRandomColor());
+	$("#colorpad3").css("background-color", getRandomColor());
+	$("#colorpad4").css("background-color", getRandomColor());
+	$("#colorpad5").css("background-color", getRandomColor());
+	$("#colorpad6").css("background-color", getRandomColor());
+	$("#colorpad7").css("background-color", getRandomColor());
+	$("#colorpad8").css("background-color", getRandomColor());
+	$("#colorpad8").css("background-color", getRandomColor());
+	$("#colorpad9").css("background-color", getRandomColor());
+	$("#colorpad10").css("background-color", getRandomColor());
+}
+
+	
+	
+	</script>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	
+	
+<body onload="setRandomColor()">
+<div>
+	<div id="colorpad" style="width:15px;height:600px;background-color:#333; float:left;"><p></p><br></div></div>
+	
+
+<div>
+<div id="colorpad2" style="width:15px;height:600px;background-color:#999;float:left;">
+	</div>
+</div>
+<div>
+<div id="colorpad3" style="width:15px;height:600px;background-color:#999;float:left;">
+	</div>
+</div>
+<div>
+<div id="colorpad4" style="width:15px;height:600px;background-color:#999;float:left;">
+	</div>
+</div>
+<div>
+<div id="colorpad5" style="width:15px;height:600px;background-color:#999;float:left;">
+	</div>
+</div>
+<div>
+<div id="colorpad6" style="width:15px;height:600px;background-color:#999;float:left;">
+	</div>
+</div>
+<div>
+<div id="colorpad7" style="width:15px;height:600px;background-color:#999;float:left;">
+	</div>
+</div>
+<div>
+<div id="colorpad8" style="width:15px;height:600px;background-color:#999;float:left;">
+	</div>
+</div>
+<div>
+<div id="colorpad9" style="width:15px;height:600px;background-color:#999;float:left;">
+	</div>
+</div>
+<div>
+<div id="colorpad10" style="width:15px;height:600px;background-color:#999;float:left;">
+	</div>
+</div>
+<br>
+<button onclick="setRandomColor()">Random Color</button>	
+
+</body>
+</html>

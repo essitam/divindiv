@@ -1,0 +1,324 @@
+//css for scrolling options for tito
+
+body {
+    background-color: #a1caf1;
+}
+
+.horizontal-scroll-wrapper {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+      -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari 3-8 */
+    transform: rotate(20deg);
+}
+.horizontal-scroll-wrapper > #first {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-2 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+}
+.horizontal-scroll-wrapper-2 > #two {
+  width: 400px;
+  height: 500px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+.horizontal-scroll-wrapper-3 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+  transform: skewY(50deg);
+  position: 10%;
+}
+
+.horizontal-scroll-wrapper-3 > #three {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-4 {
+  width: 500px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+}
+.horizontal-scroll-wrapper-4 > #four{
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+   overflow: hidden;
+    white-space: nowrap;
+}
+
+/*div.a {
+
+	    transform: skewY(50deg);
+}*/
+
+.horizontal-scroll-wrapper-5 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+  position: absolute;
+
+
+}
+.horizontal-scroll-wrapper-5 > #five {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+  background:#6de24d;
+}
+
+.horizontal-scroll-wrapper-6 {
+  width: 500px;
+  height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+      -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari 3-8 */
+    transform: rotate(20deg);
+}
+.horizontal-scroll-wrapper-6 > #six {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-7 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+  transform: skewY(50deg);
+  position: 10%;
+}
+.horizontal-scroll-wrapper-7 > #seven {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-8 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+  transform: skewY(50deg);
+  position: 10%;
+}
+
+.horizontal-scroll-wrapper-9 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-10px);
+  position: 40%;
+}
+.horizontal-scroll-wrapper-9 > #nine {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-10 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-10px);
+  position: 40%;
+}
+.horizontal-scroll-wrapper-10 > #ten {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-11 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-30deg) translateY(-20px);
+  position: 60%;
+}
+.horizontal-scroll-wrapper-11 > #eleven {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-12 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-30deg) translateY(-20px);
+  position: 60%;
+}
+.horizontal-scroll-wrapper-12 > #twelve {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-13 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-60deg) translateY(-30px);
+  position: 60%;
+}
+.horizontal-scroll-wrapper-13 > #thirteen {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-14 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+  transform: skewY(50deg);
+  position: 10%;
+}
+
+.horizontal-scroll-wrapper-14 > #fourteen {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-15 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+  position: 10%;
+}
+
+.horizontal-scroll-wrapper-15 > #fifteen {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-16 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-30deg) translateY(-20px);
+  position: 60%;
+}
+.horizontal-scroll-wrapper-16 > #sixteen {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-17 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-10px);
+  position: 40%;
+}
+.horizontal-scroll-wrapper-17 > #seventeen {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-18 {
+  width: 500px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+}
+.horizontal-scroll-wrapper-18 > #eighteen{
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+   overflow: hidden;
+    white-space: nowrap;
+}

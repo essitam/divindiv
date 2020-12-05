@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <title>sketch.js &raquo;</title>
+        <link rel="stylesheet" href="css/example_adjust2b.css" title="default">
+       
+		<link rel="alternate stylesheet" type="text/css" href="altbackgroundb.css" title="alternative">	
+			
+    </head>
+    <body>
+		<p id="demo"></p>
+		<div id="painting" margin:0 auto;>
+        <div id="container"></div>
+        
+        <script src="js/sketch_adjustment.js"></script>
+        <script type="text/javascript" src="js/styleswitcher.js"></script><div>
+        
+			<div id="floatbutton"><a href="#" onClick="setActiveStyleSheet('alternative'); return false;">lighten</a> | <a href="#" onClick="setActiveStyleSheet('default'); return false;"> painting  
+		      </a> A S D F G H <br>
+</div>
+        
+    
+       <script>
+		   
+
+        var COLOURS = [ '#003f8e', '#A7EBCA', '#8ebbd2', '#46255e','#ff1026','#ffffff', '#b297d3', '#ffecb1' ];
+        var radius = 0;
+	//var COLOURS[0]= colourtrace;   
+
+        Sketch.create({
+
+            container: document.getElementById( 'container' ),
+            autoclear: false,
+            retina: 'auto',
+
+            setup: function() {
+                console.log( 'setup' );
+            },
+
+            update: function() {
+                radius = 2 + abs( sin( this.millis * 0.003 ) * 50 );
+            },
+
+            // Event handlers
+
+            keydown: function() {
+                if ( this.keys.C ) this.clear();
+				if (this.keys.M) { document.getElementById("demo").innerHTML = COLOURS[0] }; 
+				if (this.keys.N) { document.getElementById("demo").innerHTML = COLOURS[1] }; 
+				if (this.keys.B) { document.getElementById("demo").innerHTML = COLOURS[2] };
+				/*if (this.keys.W) { container.globalAlpha=0.2 };
+				if (this.keys.Q) { container.globalAlpha=1.0 };*/
+				
+				
+				//if (this.keys.D) this.fillStyle = this.strokeStyle = COLOURS[0];
+				//this doesn't' work with or without the {   } //
+            },
+
+            // Mouse & touch events are merged, so handling touch events by default
+            // and powering sketches using the touches array is recommended for easy
+            // scalability. If you only need to handle the mouse / desktop browsers,
+            // use the 0th touch element and you get wider device support for free.
+			//mousemove: function (){
+				
+            touchmove: function() {
+
+                for ( var i = this.touches.length - 1, touch; i >= 0; i-- ) {
+
+                    touch = this.touches[i];
+
+                    this.lineCap = 'round';
+                    this.lineJoin = 'round';
+                    this.fillStyle = this.strokeStyle = COLOURS[0]
+					if (this.keys.D) this.fillStyle = this.strokeStyle = COLOURS[1];
+					if (this.keys.F) this.fillStyle = this.strokeStyle = COLOURS[2];
+					if (this.keys.G) this.fillStyle = this.strokeStyle = COLOURS[3];
+					if (this.keys.H) this.fillStyle = this.strokeStyle = COLOURS[4];
+					if (this.keys.A) this.fillStyle = this.strokeStyle = COLOURS[5];
+					if (this.keys.S) this.fillStyle = this.strokeStyle = COLOURS[7];
+//COLOURS[ i % COLOURS.length ];   //this works to direct select the colour. so theoretically this is also where the random colour could be drawn, from the array.
+                    this.lineWidth = radius;
+					this.globalAlpha = 0.2; 
+
+                    this.beginPath();
+                    this.moveTo( touch.ox, touch.oy );
+                    this.lineTo( touch.x, touch.y );
+                    this.stroke();
+                }
+            }
+        });
+        
+        </script>
+      
+    </body>
+</html>

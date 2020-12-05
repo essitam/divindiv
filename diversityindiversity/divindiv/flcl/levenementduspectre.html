@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The web site of flcl</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <script src="jquery-3.3.1.js"></script>
+<script src="jqfloat/jqfloat.js"></script>
+
+<script>
+$(document).ready(function() {
+	
+	//jqfloat.js script
+
+	$('#snail, #message').jqFloat('stop',{
+		width:5,
+		height:0,
+		speed:30
+	});
+	$('#snail, #message').hover(function() {
+		$(this).jqFloat('play');
+	}, function() {
+		$(this).jqFloat('stop');
+	});
+		$('#sun').jqFloat({
+		width:10,
+		height:50,
+		speed:1800
+	});
+	$('.butterfly').jqFloat({
+		width:400,
+		height:100,
+		speed:1500
+	});
+	var clicked = false;
+	//define balloon attribute
+	$('#balloon').jqFloat('stop',{
+		width:5,
+		height:30,
+		speed:1500,
+		minHeight:300
+	});
+	$('#balloon').on('click', function() {
+		clicked = !clicked;
+		if(clicked)
+			$(this).jqFloat('play');
+		else 
+			$(this).jqFloat('stop');
+	});
+	$('#social').jqFloat({
+		width: 10,
+		height: 10,
+		speed: 1500
+	});
+});
+</script>
+    <style>
+    
+    @-webkit-keyframes argh-my-eyes {
+     0% { background-color: #231716; }
+    20% { background-color: #e7e0d3; }
+    40% { background-color: #dfe1eb; }
+    60% { background-color: #c5bbca; }
+    80% { background-color: #c5c6d0; }
+	100% { background-color: #231716; }
+  }
+  @-moz-keyframes argh-my-eyes {
+     0% { background-color: #231716; }
+    20% { background-color: #e7e0d3; }
+    40% { background-color: #dfe1eb; }
+    60% { background-color: #c5bbca; }
+    80% { background-color: #c5c6d0; }
+	100% { background-color: #231716; }
+  }
+  @keyframes argh-my-eyes {
+     0% { background-color: #231716; }
+    20% { background-color: #e7e0d3; }
+    40% { background-color: #dfe1eb; }
+    60% { background-color: #c5bbca; }
+    80% { background-color: #c5c6d0; }
+	100% { background-color: #231716; }
+  }
+  body {
+  -webkit-animation: argh-my-eyes 3s infinite;
+  -moz-animation:    argh-my-eyes 3s infinite;
+  animation:         argh-my-eyes 3s infinite;
+}
+    
+#snail{
+	width:85px;
+	height:171px;
+	background:url(ghost.png) no-repeat 0 -240px;
+	position:absolute;
+	z-index:10;
+	top:202px;
+	left:20%;
+}
+   
+   #balloon{
+	width:140px;
+	height:101px;
+	background:url(ghost.png) no-repeat 0 -240px;
+	position:absolute;
+	z-index:10;
+	top:602px;
+	left:70%;
+}
+       #sun{
+	width:300px;
+	height:301px;
+	background:url(ghost.png) no-repeat 0 -240px;
+	position:absolute;
+	z-index:10;
+	top:-22px;
+	left:80%;
+}   #butterfly{
+	width:240px;
+	height:101px;
+	background:url(ghost.png) no-repeat 0 -240px;
+	position:absolute;
+	z-index:10;
+	top:402px;
+	left:30%;
+}
+    </style>
+  </head>
+  <body>
+
+<div id="snail"></div>
+<div id="balloon"></div>
+<div id="butterfly"></div>
+<div id="sun"></div>
+  </body>
+</html>

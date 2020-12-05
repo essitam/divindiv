@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta charset="utf-8">
+
+<script src="d3.v4.min.js"></script>
+<script src="js/soundbutton.js"></script>
+<script src="js/keyplay.js"></script>
+<script src="js/peel.js"></script>
+<link rel="stylesheet" type="text/css" href="css/soundbuttonrand.css">
+
+<script>
+var x = document.getElementById("myDIV");
+
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display == "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+var newsrc = "peels/peel1.png";
+
+function changeImage() {
+if ( newsrc == "peels/peel1.png" ) {
+	document.images["rr"].src = "peels/peel1.png";
+	document.images["rr"].alt = "Peel";
+	newsrc  = "oranges/orange2.png";
+}
+else {
+	document.images["rr"].src = "oranges/orange2.png";
+	document.images["rr"].alt = "Orange";
+	newsrc  = "peels/peel1.png";
+}
+}
+
+</script>
+</head>
+<body>
+
+	<div class="topleft" onclick="myFunction(); changeImage();"><img id="rr" src="oranges/orange2.png" height="50" width="50"></div>
+
+	<div id="myDIV">
+	<div class="random" id="r1"><a href="http://inflexions.org/diversityindiversity/memos/orange.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+	<div class="random" id="r2"><a href="http://inflexions.org/diversityindiversity/memos/video_2_2.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+	<div class="random" id="r3"><a href="http://www.inflexions.org/diversityindiversity/tito4.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+	<div class="random" id="r4"><a href="http://inflexions.org/diversityindiversity/memos/relationshapes.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+	<div class="random" id="r5"><a href="http://inflexions.org/diversityindiversity/memos/izsafe.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+	<div class="random" id="r6"><a href="http://inflexions.org/diversityindiversity/memos/spaze2.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+	<div class="random" id="r7"><a href="http://inflexions.org/diversityindiversity/adamdrawings/test/index_alt.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+</div>
+
+  <video autoplay muted loop id="myVideo">
+  <source src="videos/IMG_5280.MOV" type="video/mp4">
+</video>
+</body>
+</html>

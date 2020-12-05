@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .fit { /* set relative picture size */
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .center {
+    display: block;
+    margin: auto;
+  }
+</style>
+
+    <meta charset="UTF-8">
+    <title>The web site of flcl</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <h1>minimal existences?</h1>
+
+<img class="center fit" src="2018-02-09142607.jpg"> 
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" language="JavaScript">
+  function set_body_height() { // set body height = window height
+    $('body').height($(window).height());
+  }
+  $(document).ready(function() {
+    $(window).bind('resize', set_body_height);
+    set_body_height();
+  });
+</script>
+ 
+
+
+  </body>
+</html>

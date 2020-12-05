@@ -1,0 +1,99 @@
+body {
+    background-color: #a1caf1;
+}
+
+.horizontal-scroll-wrapper {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+      -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari 3-8 */
+    transform: rotate(20deg);
+}
+.horizontal-scroll-wrapper > div {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-2 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+}
+.horizontal-scroll-wrapper-2 > div {
+  width: 400px;
+  height: 100px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+.horizontal-scroll-wrapper-3 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+  transform: skewY(50deg);
+  position: 10%;
+}
+
+.horizontal-scroll-wrapper-3 > div {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper-4 {
+  width: 500px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+}
+.horizontal-scroll-wrapper-4 > div {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+   overflow: hidden;
+    white-space: nowrap;
+}
+
+/*div.a {
+		
+	    transform: skewY(50deg);
+}*/
+
+.horizontal-scroll-wrapper-5 {
+  width: 500px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+  position: absolute;
+  
+ 
+}
+.horizontal-scroll-wrapper-5 > div {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+  background:yellow;
+}

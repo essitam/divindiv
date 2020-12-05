@@ -1,0 +1,282 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<script src="js/soundbutton.js"></script>
+<script src="js/keyplay.js"></script>
+<script src="js/peel.js"></script>
+<link rel="stylesheet" type="text/css" href="css/soundbuttonrand.css">
+
+<style>
+
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Proxima Nova";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{margin-top:20.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:normal;}
+h2
+	{margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:normal;}
+h3
+	{margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:#434343;
+	font-weight:normal;}
+h4
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;
+	font-weight:normal;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;
+	font-weight:normal;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:26.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:16.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:15.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+.MsoChpDefault
+	{font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+.MsoPapDefault
+	{line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:5.5in 8.5in;
+	margin:0in 0in 0in 0in;}
+div.WordSection1
+	{page:WordSection1;}
+
+.sparks {
+ margin-left: 25%;
+ margin-right: 25%;
+}
+</style>
+<script>
+var x = document.getElementById("myDIV");
+
+function myFunction() {
+	var x = document.getElementById("myDIV");
+	if (x.style.display == "block") {
+			x.style.display = "none";
+	} else {
+			x.style.display = "block";
+	}
+}
+
+
+var newsrc = "peels/peel1.png";
+
+function changeImage() {
+if ( newsrc == "peels/peel1.png" ) {
+document.images["rr"].src = "peels/peel1.png";
+document.images["rr"].alt = "Peel";
+newsrc  = "oranges/orange2.png";
+}
+else {
+document.images["rr"].src = "oranges/orange2.png";
+document.images["rr"].alt = "Orange";
+newsrc  = "peels/peel1.png";
+}
+}
+
+</script>
+</head>
+	<div class="topleft" onclick="myFunction(); changeImage();"><img id="rr" src="oranges/orange2.png" height="50" width="50"></div>
+
+<div id="myDIV">
+<div class="random" id="r1"><a href="http://inflexions.org/diversityindiversity/memos/FUET-memo.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+<div class="random" id="r2"><a href="http://inflexions.org/diversityindiversity/memos/exploding-plastic-hands.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r3"><a href="http://inflexions.org/diversityindiversity/memos/fabulation-and-fake-news.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r4"><a href="http://inflexions.org/diversityindiversity/memos/nemo-memo.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+<div class="random" id="r5"><a href="http://inflexions.org/diversityindiversity/memos/izsafe.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+<div class="random" id="r6"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r7"><a href="http://inflexions.org/diversityindiversity/memos/sparks-memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r8"><a href="http://inflexions.org/diversityindiversity/memos/video_2_2.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+<div class="random" id="r9"><a href="http://inflexions.org/diversityindiversity/memos/zlip.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+<div class="random" id="r10"><a href="http://inflexions.org/diversityindiversity/memos/howtodiis4ppearcompletely0.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r11"><a href="http://inflexions.org/diversityindiversity/memos/orange.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r12"><a href="http://inflexions.org/diversityindiversity/catzz.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+<div class="random" id="r14 r"><a href="http://inflexions.org/diversityindiversity/memos/o%C9%AF%C7%9D%C9%AF%20pl%C9%B9o%CA%8D%20p%C7%9D%CA%87%C9%B9%C7%9D%CA%8Cu%E1%B4%89%20pu%C9%90%20uo%E1%B4%89%CA%87%C9%94%E1%B4%89%C9%9F%20%C7%9D%CA%8C%E1%B4%89%CA%87%C9%90ln%C9%94%C7%9Dds%20%C9%90.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r15 r"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r16 r"><a href="http://inflexions.org/diversityindiversity/memos/so-fa_bulouss.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+</div>
+<body bgcolor="#EAD1DC" lang=EN-US>
+<div class="sparks">
+<div class=WordSection1>
+
+<p class=MsoNormal><span lang=EN style='font-size:14.0pt;line-height:115%;
+font-family:"Proxima Nova"'>sparks sparks sparks</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:"Proxima Nova"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:"Proxima Nova"'>            </span><span lang=EN style='font-size:
+8.0pt;line-height:115%;font-family:"Proxima Nova"'>&quot;the urge towards the
+future [is] based upon an appetite in the present:&quot; <br>
+            “the immediate goal is to procure.&quot; (<i>Process and Reality</i>,
+32)</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:8.0pt;line-height:115%;
+font-family:"Proxima Nova"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:8.0pt;line-height:115%;font-family:"Proxima Nova"'>            crossing
+different planes, sparks ignite transversal appetites</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:8.0pt;line-height:115%;font-family:"Proxima Nova"'>shifting
+modes</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:8.0pt;line-height:115%;font-family:"Proxima Nova"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:8.0pt;line-height:115%;font-family:"Proxima Nova"'>carrying
+feeling across</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:8.0pt;line-height:115%;font-family:"Proxima Nova"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:8.0pt;line-height:115%;font-family:"Proxima Nova"'>.</span><span
+lang=EN style='font-size:36.0pt;line-height:115%;font-family:"Proxima Nova"'>.<span
+style='color:#85200C'>.</span></span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:8.0pt;line-height:115%;font-family:"Proxima Nova"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:8.0pt;line-height:115%;
+font-family:"Proxima Nova"'>            “entities that are beginnings, rough
+sketches, monuments that don’t exist and maybe will never do”. This                   
+doesn’t mean that they aren’t real, and even if they fail to actualize they
+will continue to act upon the                      disposition of the actual
+bodies.[1] But they’re sparks that sometimes last less than a blink of an human
+eye.</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:8.0pt;line-height:115%;
+font-family:"Proxima Nova"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:8.0pt;line-height:115%;
+font-family:"Proxima Nova"'>                                    </span><img
+width=83 height=56 src="sparks-memo.fld/image001.jpg" align=left hspace=12
+vspace=12></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:8.0pt;line-height:115%;
+font-family:"Proxima Nova"'><img width=330 height=32 id=image4.png
+src="sparks-memo.fld/image002.jpg"></span></p>
+
+<p class=MsoNormal style='margin-left:4.5in'><span lang=EN style='font-size:
+8.0pt;line-height:115%;font-family:"Proxima Nova";color:#DD7E6B'>tiny
+existences </span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:8.0pt;line-height:115%;
+font-family:"Proxima Nova"'><img width=71 height=67 id=image15.png
+src="sparks-memo.fld/image003.jpg"></span><span lang=EN style='font-size:8.0pt;
+line-height:115%;font-family:"Proxima Nova"'>              <span
+style='color:#DD7E6B'><img width=186 height=74 id=image14.jpg
+src="sparks-memo.fld/image004.jpg"></span><span style='color:#DD7E6B'>   event
+decisions!</span></span><img width=61 height=85
+src="sparks-memo.fld/image005.jpg" align=left hspace=12 vspace=12><img
+width=51 height=35 src="sparks-memo.fld/image006.jpg" align=left hspace=12
+vspace=12><img width=149 height=200 src="sparks-memo.fld/image007.jpg"
+align=left hspace=12 vspace=12><img width=71 height=27
+src="sparks-memo.fld/image008.jpg" align=left hspace=12 vspace=12></p>
+
+</div>
+</div>
+</body>
+
+</html>

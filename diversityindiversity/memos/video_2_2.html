@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta charset="utf-8">
+<script src="d3.v4.min.js"></script>
+<script src="js/soundbutton.js"></script>
+<script src="js/keyplay.js"></script>
+<script src="js/peel.js"></script>
+<link rel="stylesheet" type="text/css" href="css/soundbuttonrand.css">
+<script>
+var x = document.getElementById("myDIV");
+
+function myFunction() {
+	var x = document.getElementById("myDIV");
+	if (x.style.display == "block") {
+			x.style.display = "none";
+	} else {
+			x.style.display = "block";
+	}
+}
+
+
+var newsrc = "peels/peel1.png";
+
+function changeImage() {
+if ( newsrc == "peels/peel1.png" ) {
+document.images["rr"].src = "peels/peel1.png";
+document.images["rr"].alt = "Peel";
+newsrc  = "oranges/orange2.png";
+}
+else {
+document.images["rr"].src = "oranges/orange2.png";
+document.images["rr"].alt = "Orange";
+newsrc  = "peels/peel1.png";
+}
+}
+
+</script>
+</head>
+<body>
+	<div class="topleft" onclick="myFunction(); changeImage();"><img id="rr" src="oranges/orange2.png" height="50" width="50"></div>
+
+	<div id="myDIV">
+	<div class="random" id="r1"><a href="http://inflexions.org/diversityindiversity/memos/FUET-memo.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+	<div class="random" id="r2"><a href="http://inflexions.org/diversityindiversity/memos/exploding-plastic-hands.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+	<div class="random" id="r3"><a href="http://inflexions.org/diversityindiversity/memos/fabulation-and-fake-news.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+	<div class="random" id="r4"><a href="http://inflexions.org/diversityindiversity/memos/nemo-memo.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+	<div class="random" id="r5"><a href="http://inflexions.org/diversityindiversity/relationshapes.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+	<div class="random" id="r6"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+	<div class="random" id="r7"><a href="http://inflexions.org/diversityindiversity/memos/sparks-memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+	<div class="random" id="r8"><a href="http://inflexions.org/diversityindiversity/bathtoys.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+	<div class="random" id="r9"><a href="http://inflexions.org/diversityindiversity/memos/zlip.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+	<div class="random" id="r10"><a href="http://inflexions.org/diversityindiversity/memos/howtodiis4ppearcompletely0.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+	<div class="random" id="r11"><a href="http://inflexions.org/diversityindiversity/adamdrawings/test/index_alt.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+	<div class="random" id="r12"><a href="http://inflexions.org/diversityindiversity/memos/sparks-memo.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+	<div class="random" id="r14 r"><a href="http://inflexions.org/diversityindiversity/memos/o%C9%AF%C7%9D%C9%AF%20pl%C9%B9o%CA%8D%20p%C7%9D%CA%87%C9%B9%C7%9D%CA%8Cu%E1%B4%89%20pu%C9%90%20uo%E1%B4%89%CA%87%C9%94%E1%B4%89%C9%9F%20%C7%9D%CA%8C%E1%B4%89%CA%87%C9%90ln%C9%94%C7%9Dds%20%C9%90.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+	<div class="random" id="r15 r"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+	<div class="random" id="r16 r"><a href="http://inflexions.org/diversityindiversity/memos/so-fa_bulouss.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+	</div>
+	<div>
+  <video autoplay loop id="myVideo">
+  <source src="videos/img_2496.mov" type="video/mp4">
+</video>
+</div>
+</body>
+</html>

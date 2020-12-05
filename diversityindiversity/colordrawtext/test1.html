@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<script type="text/javascript">
+//
+// Description: Randomly change background color every 5 seconds
+//
+//
+// NewcWare 1997
+// Author: Scott Newcomer 3/1997
+// Email: nuke@bright.net
+//
+function setbackground()
+{
+window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay
+
+var index = Math.round(Math.random() * 17);
+
+var ColorValue = "FFFFFF"; // default color - white (index = 0)
+
+if(index == 1)
+ColorValue = "6C2DC7"; //peach
+if(index == 2)
+ColorValue = "4B0082"; //violet
+if(index == 3)
+ColorValue = "F52887"; //lt blue
+if(index == 4)
+ColorValue = "FC6C85"; //cyan
+if(index == 5)
+ColorValue = "C11B17"; //tan
+if(index == 6)
+ColorValue = "FF8040"; //lt green
+if(index == 7)
+ColorValue = "E56717"; //lt yellow
+if(index == 8)
+ColorValue = "FFD801"; //lt orange
+if(index == 9)
+ColorValue = "64E986"; //lt grey
+    if(index == 10)
+ColorValue = "54C571"; //lt grey
+        if(index == 11)
+ColorValue = "008080"; //lt grey
+    if(index == 12)
+ColorValue = "3EA99F"; //lt grey
+        if(index == 13)
+ColorValue = "77BFC7"; //lt grey
+            if(index == 13)
+ColorValue = "6495ED"; //lt grey
+                if(index == 14)
+ColorValue = "1569C7"; //lt grey
+    if(index == 15)
+ColorValue = "151B54"; //lt grey
+    if(index == 16)
+ColorValue = "6D7B8D"; //lt grey
+    if(index == 17)
+ColorValue = "2C3539"; //lt grey
+
+/*document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;*/
+document.getElementById('posts').style.backgroundColor = "#" + ColorValue;
+    /*the issue was run side by side, both div were changing to the same color - you'll need two separate color randomizers to draw from, or somehow change the number the div posts draws from by i+1*/
+
+}
+    
+    
+function setbackground2()
+{
+window.setTimeout( "setbackground2()", 8000); // 8000 milliseconds delay
+
+var index2 = Math.round(Math.random() * 17);
+
+var ColorValue2 = "FFFFFF"; // default color - white (index = 0)
+
+if(index2 == 1)
+ColorValue2 = "6C2DC7"; //peach
+if(index2 == 2)
+ColorValue2 = "4B0082"; //violet
+if(index2 == 3)
+ColorValue2 = "F52887"; //lt blue
+if(index2 == 4)
+ColorValue2 = "FC6C85"; //cyan
+if(index2 == 5)
+ColorValue2 = "C11B17"; //tan
+if(index2 == 6)
+ColorValue2 = "FF8040"; //lt green
+if(index2 == 7)
+ColorValue2 = "E56717"; //lt yellow
+if(index2 == 8)
+ColorValue2 = "FFD801"; //lt orange
+if(index2 == 9)
+ColorValue2 = "64E986"; //lt grey
+    if(index2 == 10)
+ColorValue2 = "54C571"; //lt grey
+        if(index2 == 11)
+ColorValue2 = "008080"; //lt grey
+    if(index2 == 12)
+ColorValue2 = "3EA99F"; //lt grey
+        if(index2 == 13)
+ColorValue2 = "77BFC7"; //lt grey
+            if(index2 == 13)
+ColorValue2 = "6495ED"; //lt grey
+                if(index2 == 14)
+ColorValue2 = "1569C7"; //lt grey
+    if(index2 == 15)
+ColorValue2 = "151B54"; //lt grey
+    if(index2 == 16)
+ColorValue2 = "6D7B8D"; //lt grey
+    if(index2 == 17)
+ColorValue2 = "2C3539"; //lt grey
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue2;
+    
+
+    /*if you try to run 2 elements from the same randomizer, they will both come up with the same colour selection, making their difference undetectable visually. you'll need two separate color randomizers to draw from*/
+
+}
+</script>
+<body onload="setbackground(), setbackground2()";>
+<div id="posts">
+       </div>
+</head>
+
+<body>
+	  <canvas id='canvas'></canvas>
+<span id='info' style="color:green;">(click n' drag)<span>
+
+<!-- 
+  Drawing with text:
+  
+  -  Click and drag to draw.
+  -  Double click to clear.
+
+  Ported from java at http://www.generative-gestaltung.de
+
+  by Tim Holman - @twholman
+
+-->
+  
+  
+
+    <script  src="test1.js"></script>
+
+
+</body>
+</html>

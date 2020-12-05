@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Increasing and Decreasing Image Size</title>
+<style type="text/css">
+	#colorblock {
+		width: 300px;
+		height: 300px;
+		background-color: cornflowerblue;
+		-webkit-transition: width 3s; /* Safari */
+    -webkit-transition-timing-function: ease; /* Safari */
+    transition: width 3s;
+    transition-timing-function: ease;
+		
+	}
+	
+    button{
+        padding: 3px 6px;
+    }
+    button img{
+        vertical-align: middle;
+    }
+</style>
+
+
+<script type="text/javascript">
+    function zoomin(){
+        var myImg = document.getElementById("colorblock");
+        var currWidth = myImg.clientWidth;
+        if(currWidth == 800){
+            alert("Maximum zoom-in level reached.");
+        } else{
+            myImg.style.width = (currWidth + 100) + "px";
+        } 
+    }
+    function zoomout(){
+        var myImg = document.getElementById("colorblock");
+        var currWidth = myImg.clientWidth;
+        if(currWidth == 50){
+            alert("Maximum zoom-out level reached.");
+        } else{
+            myImg.style.width = (currWidth - 50) + "px";
+        }
+    }
+</script>
+</head>
+<body>
+    <p>
+        <button type="button" onclick="zoomin()"><img src="/images/"> Zoom In</button>
+        <button type="button" onclick="zoomout()"><img src="/examples/images/zoom-out.png"> Zoom Out</button>
+    </p>
+	<div id="colorblock" alt="Cloudy Sky"></div>
+</body>
+</html>                            

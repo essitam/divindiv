@@ -1,0 +1,495 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Proxima Nova";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Roboto;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Alegreya;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{margin-top:20.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:normal;}
+h2
+	{margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:normal;}
+h3
+	{margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:#434343;
+	font-weight:normal;}
+h4
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;
+	font-weight:normal;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;
+	font-weight:normal;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:26.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:16.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:15.0pt;
+	font-family:"Arial",sans-serif;
+	color:#666666;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+.MsoChpDefault
+	{font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+.MsoPapDefault
+	{line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:419.55pt 595.3pt;
+	margin:0in 1.0in .5in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+
+.nemo{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+</style>
+<script src="d3.v4.min.js"></script>
+<script src="js/soundbutton.js"></script>
+<script src="js/keyplay.js"></script>
+<script src="js/peel.js"></script>
+<link rel="stylesheet" type="text/css" href="css/soundbuttonrand.css">
+<script>
+
+	var x = document.getElementById("myDIV");
+
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display == "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+
+var newsrc = "peels/peel1.png";
+
+function changeImage() {
+if ( newsrc == "peels/peel1.png" ) {
+	document.images["rr"].src = "peels/peel1.png";
+	document.images["rr"].alt = "Peel";
+	newsrc  = "oranges/orange2.png";
+}
+else {
+	document.images["rr"].src = "oranges/orange2.png";
+	document.images["rr"].alt = "Orange";
+	newsrc  = "peels/peel1.png";
+}
+}
+
+</script>
+</head>
+
+<body bgcolor="#FFD966" lang=EN-US>
+  <div class="nemo">
+<div class="topleft" onclick="myFunction(); changeImage();"><img id="rr" src="oranges/orange2.png" height="50" width="50"></div>
+
+<div id="myDIV">
+<div class="random" id="r1"><a href="http://inflexions.org/diversityindiversity/memos/FUET-memo.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+<div class="random" id="r2"><a href="http://inflexions.org/diversityindiversity/memos/exploding-plastic-hands.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r3"><a href="http://inflexions.org/diversityindiversity/memos/fabulation-and-fake-news.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r4"><a href="http://inflexions.org/diversityindiversity/spaze2.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+<div class="random" id="r5"><a href="http://inflexions.org/diversityindiversity/memos/izsafe.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+<div class="random" id="r6"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r7"><a href="http://inflexions.org/diversityindiversity/memos/sparks-memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r8"><a href="http://inflexions.org/diversityindiversity/memos/video_2_2.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+<div class="random" id="r9"><a href="http://inflexions.org/diversityindiversity/memos/zlip.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
+<div class="random" id="r10"><a href="http://inflexions.org/diversityindiversity/memos/howtodiis4ppearcompletely0.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r11"><a href="http://inflexions.org/diversityindiversity/memos/orange.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r12"><a href="http://inflexions.org/diversityindiversity/memos/sparks-memo.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+<div class="random" id="r14 r"><a href="http://inflexions.org/diversityindiversity/memos/o%C9%AF%C7%9D%C9%AF%20pl%C9%B9o%CA%8D%20p%C7%9D%CA%87%C9%B9%C7%9D%CA%8Cu%E1%B4%89%20pu%C9%90%20uo%E1%B4%89%CA%87%C9%94%E1%B4%89%C9%9F%20%C7%9D%CA%8C%E1%B4%89%CA%87%C9%90ln%C9%94%C7%9Dds%20%C9%90.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
+<div class="random" id="r15 r"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
+<div class="random" id="r16 r"><a href="http://inflexions.org/diversityindiversity/memos/so-fa_bulouss.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
+</div>
+<div class=WordSection1>
+
+<p class=MsoNormal align=right style='margin-right:-36.75pt;text-align:right'><b><span
+lang=EN style='font-size:18.0pt;line-height:115%;font-family:"Proxima Nova"'>a
+d v e n t u r e  t i m e </span></b><img width=424 height=70
+src="nemo%20memo.fld/image001.jpg" align=left></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:10.0pt;line-height:115%;font-family:"Proxima Nova"'>an
+in-secret memo on the powers of the false</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:10.0pt;line-height:115%;font-family:"Proxima Nova"'>into the
+depths of strangeness</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><b><span lang=EN
+style='font-size:10.0pt;line-height:115%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-left:-30.0pt'><span lang=EN style='font-size:
+12.0pt;line-height:115%;font-family:Alegreya'>on a scale of dragon, the
+following in-formation is considered HUGE is <b> <span style='color:#F1C232'>huge</span>  
+</b></span><b><span lang=EN style='font-size:14.0pt;line-height:115%;
+font-family:Alegreya;color:#FFD966'>huge</span></b><b><span lang=EN
+style='font-size:14.0pt;line-height:115%;font-family:Alegreya'>  </span></b><b><span
+lang=EN style='font-size:18.0pt;line-height:115%;font-family:Alegreya;
+color:#FFE599'>huge</span></b><b><span lang=EN style='font-size:18.0pt;
+line-height:115%;font-family:Alegreya'>  </span></b><b><span lang=EN
+style='font-size:22.0pt;line-height:115%;font-family:Alegreya;color:#FFF2CC'>huge</span></b></p>
+
+<p class=MsoNormal align=right style='margin-right:-36.75pt;text-align:right'><span
+lang=EN style='font-size:12.0pt;line-height:115%;font-family:Alegreya;
+color:white;background:red'>in whose company are you? a question to the dragons</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:-42.0pt;text-indent:-6.0pt'><span
+lang=EN style='font-size:9.0pt;line-height:115%;font-family:Alegreya;
+background:white'>the in-formation has been</span><img width=227 height=110
+src="nemo%20memo.fld/image002.jpg" align=left hspace=12 vspace=12></p>
+
+<p class=MsoNormal style='margin-left:-42.0pt;text-indent:-6.0pt'><span
+lang=EN style='font-size:9.0pt;line-height:115%;font-family:Alegreya;
+background:white'>tainted by politics; a politics before its information</span></p>
+
+<p class=MsoNormal style='margin-left:-42.0pt;text-indent:-6.0pt'><span
+lang=EN style='font-size:9.0pt;line-height:115%;font-family:Alegreya;
+background:white'>the immanent release of</span></p>
+
+<p class=MsoNormal style='margin-left:-42.0pt;text-indent:-6.0pt'><span
+lang=EN style='font-size:9.0pt;line-height:115%;font-family:Alegreya;
+background:white'>this memo is of dire</span></p>
+
+<p class=MsoNormal style='margin-left:-42.0pt;text-indent:-6.0pt'><span
+lang=EN style='font-size:9.0pt;line-height:115%;font-family:Alegreya;
+background:white'>Affects</span></p>
+
+<p class=MsoNormal style='margin-left:-42.0pt;text-indent:-6.0pt'><span
+lang=EN style='font-size:9.0pt;line-height:115%;font-family:Alegreya;
+background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:-42.0pt;text-indent:-6.0pt'><span
+lang=EN style='font-size:9.0pt;line-height:115%;font-family:Alegreya;
+background:white'>The consequences cannot be overseen</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>They can never be</span></p>
+
+<p class=MsoNormal style='text-indent:-.75in'><span lang=EN style='font-size:
+9.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN style='font-size:22.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>could only talk  O   R   A   N  G  E (
+l  y )  with-the-dragons</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>hos (ti) pitality</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>burn </span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>                  doors </span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>                                    with                                                           
+</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>                                                      breathe
+</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>never enter alone - always more than one</span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span lang=EN style='font-size:
+9.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya;background:white'>&quot;we love wooden floor but not
+wooden doors&quot; ()</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:9.0pt;line-height:115%;
+font-family:Alegreya'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:9.0pt;line-height:115%;font-family:Alegreya;background:white'>All
+scales of action are present in the flash of [dragontude]. How can the act of
+activism produce an enthusiasm of the body that carries, in a flash, all these
+scales, all these durations?</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:9.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:9.0pt;line-height:115%;font-family:Alegreya'><img width=38
+height=36 id=image9.png src="nemo%20memo.fld/image003.jpg"></span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN
+style='font-size:9.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Alegreya;background:white'>an immanent</span></b><b><span lang=EN
+style='font-size:12.0pt;line-height:115%;font-family:Alegreya;background:white'>
+</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN
+style='font-size:9.0pt;line-height:115%;font-family:Alegreya;background:white'>etiquette
+to  </span><b><s><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Alegreya;background:white'>receive</span></s></b><b><span lang=EN
+style='font-size:10.0pt;line-height:115%;font-family:Alegreya;background:white'>
+</span></b></p>
+
+<p class=MsoNormal align=right style='text-align:right'><b><span lang=EN
+style='font-size:12.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b><span lang=EN style='font-size:
+10.0pt;line-height:115%;font-family:Alegreya;background:white'>dragons at home</span></b></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b><span lang=EN style='font-size:
+10.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b><span lang=EN style='font-size:
+10.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b><span lang=EN style='font-size:
+10.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b><span lang=EN style='font-size:
+10.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b><span lang=EN style='font-size:
+10.0pt;line-height:115%;font-family:Alegreya;background:white'>never a perilous
+endeavour</span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><b><span lang=EN
+style='font-size:10.0pt;line-height:115%;font-family:Alegreya;background:white'>risk,
+loose, danger</span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><b><span lang=EN
+style='font-size:10.0pt;line-height:115%;font-family:Alegreya;background:white'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><b><span lang=EN
+style='font-size:10.0pt;line-height:115%;font-family:Alegreya;background:white'>loose
+all, find all</span></b><span lang=EN><br clear=all style='page-break-before:
+always'>
+</span><b><span lang=EN style='font-size:10.0pt;line-height:115%;font-family:
+Alegreya'><img width=179 height=114 id=image10.jpg
+src="nemo%20memo.fld/image004.jpg"></span></b></p>
+
+<p class=MsoNormal style='margin-left:2.0in'><span lang=EN style='font-size:
+14.0pt;line-height:115%;font-family:Roboto;color:#FE4353;background:white'>m</span><span
+lang=EN style='font-size:14.0pt;line-height:115%;font-family:Roboto;color:#F96F2B;
+background:white'>o</span><span lang=EN style='font-size:14.0pt;line-height:
+115%;font-family:Roboto;color:#E39E0E;background:white'>d</span><span lang=EN
+style='font-size:14.0pt;line-height:115%;font-family:Roboto;color:#C0C801;
+background:white'>e</span><span lang=EN style='font-size:14.0pt;line-height:
+115%;font-family:Roboto;color:#94E905;background:white'>s</span><span lang=EN
+style='font-size:14.0pt;line-height:115%;font-family:Roboto;color:#65FB19;
+background:white'> </span><span lang=EN style='font-size:14.0pt;line-height:
+115%;font-family:Roboto;color:#3AFD3B;background:white'>o</span><span lang=EN
+style='font-size:14.0pt;line-height:115%;font-family:Roboto;color:#19EE67;
+background:white'>f</span><span lang=EN style='font-size:14.0pt;line-height:
+115%;font-family:Roboto;color:#05D095;background:white'> </span><span lang=EN
+style='font-size:14.0pt;line-height:115%;font-family:Roboto;color:#01A7C1;
+background:white'>e</span><span lang=EN style='font-size:14.0pt;line-height:
+115%;font-family:Roboto;color:#0F79E4;background:white'>n</span><span lang=EN
+style='font-size:14.0pt;line-height:115%;font-family:Roboto;color:#2C4BF9;
+background:white'>t</span><span lang=EN style='font-size:14.0pt;line-height:
+115%;font-family:Roboto;color:#5425FE;background:white'>e</span><span lang=EN
+style='font-size:14.0pt;line-height:115%;font-family:Roboto;color:#820BF2;
+background:white'>r</span><span lang=EN style='font-size:14.0pt;line-height:
+115%;font-family:Roboto;color:#B001D6;background:white'>i</span><span lang=EN
+style='font-size:14.0pt;line-height:115%;font-family:Roboto;color:#D707AF;
+background:white'>n</span><span lang=EN style='font-size:14.0pt;line-height:
+115%;font-family:Roboto;color:#F21E81;background:white'>g </span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:13.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:13.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>Oh, yeah. Oh, don’t worry,
+100 percent. Can you imagine that?</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:13.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:13.0pt;line-height:115%;
+font-family:Roboto;color:#980000;background:white'>one hundred percent </span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:13.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:13.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>100% (thumbs up)</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:13.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:13.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>                           powers
+of the false</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>might take over</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>            faces are
+swapped</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>                        Identities
+divided :: dividuals</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>Urgency was not misplaced.
+The weight of the world we compose with, a world of austerity and neoliberalism
+and racism and exclusion which every day undervalues what collective living can
+be, is a heavy burden to live with</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN style='font-size:10.0pt;line-height:115%;
+font-family:Roboto;color:#191F24;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'><span lang=EN
+style='font-size:10.0pt;line-height:115%;font-family:Roboto;color:#191F24'><img
+width=195 height=100 id=image5.png src="nemo%20memo.fld/image005.jpg"></span></p>
+
+</div>
+</div>
+</body>
+
+</html>

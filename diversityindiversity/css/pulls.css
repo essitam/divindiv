@@ -1,0 +1,15 @@
+.pulls {
+    width: 10px;
+    height: 10000px;
+    background: orange;
+    -webkit-transition: width 50s; /* Safari */
+    -webkit-transition-timing-function: linear; /* Safari */
+    transition: width 50s;
+    transition-timing-function: linear;
+
+}
+
+.pulls:hover {
+    width: 1000px;
+
+}

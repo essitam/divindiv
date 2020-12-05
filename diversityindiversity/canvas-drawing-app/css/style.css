@@ -1,0 +1,54 @@
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+
+#textblock{
+	position: absolute;
+	top: 80px;
+	z-index: 0;
+	width:300px;
+	left: -10;
+	font-family: "Century-Gothic", century gothic, sans-serif;
+	line-height: 1.3em;
+	font-weight: 200;
+	color: #141313;
+	
+	
+	
+}
+
+#c {
+  margin-left: -8px;
+  margin-top: -8px;
+  cursor: crosshair;
+	z-index: 100;
+}
+
+.buttons {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*background: black;*/
+  text-align: right;
+  padding: 0.3em;
+}
+
+button {
+  padding: 0.3em;
+  display: inline-block;
+}
+
+label {
+  color: white;
+  font-family: sans-serif;
+  padding: 0.2em;
+}

@@ -1,0 +1,23 @@
+.foo {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: none;
+}
+
+.blue1 {
+  background: #13b4ff;
+}
+
+.blue2 {
+  background: #0080FF;
+}
+
+.blue3 {
+  background: #36b7c9;
+}
+
+.blue4 {
+  background: #777ff0;
+}

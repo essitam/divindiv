@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The strange web site of flcl</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+<script src="jquery-3.3.1.js"></script>
+<script>
+$('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
+
+$('html, body').animate({
+    scrollTop: $("#fly").offset().top
+}, 1000);
+</script>
+  </head>
+  <body>
+    <a href="#fly" id="top">fly</a>
+    <div id="#fly" style="position: absolute; left: center; bottom: -100%; padding: 640px;">fly fly <a href="#top" id="bottom">Click to scroll up</a></div>
+  
+  
+  <a href="#bottom" id="top">Click to scroll down</a>
+
+
+
+
+  </body>
+</html>
