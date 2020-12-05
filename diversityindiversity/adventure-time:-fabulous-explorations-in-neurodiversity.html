@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>diversity in diversity</title>
+<link rel="shortcut icon" href="oranges/orange2.png" />
 <link rel="stylesheet" type="text/css" href="css/pulls-a.css">
 <script src="d3.v4.min.js"></script>
 <script src="js/soundbutton.js"></script>
@@ -10,44 +11,13 @@
 <script type='text/javascript' src='js/peel.js'></script>
 <link rel="stylesheet" type="text/css" href="css/soundbuttonrand.css">
 <link rel="stylesheet" href="adamcss/horizontal-scroll-all.css">
-
-<script>
-var x = document.getElementById("myDIV");
-
-function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display == "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-
-var newsrc = "peels/peel1.png";
-
-function changeImage() {
-if ( newsrc == "peels/peel1.png" ) {
-	document.images["rr"].src = "peels/peel1.png";
-	document.images["rr"].alt = "Peel";
-	newsrc  = "oranges/orange2.png";
-}
-else {
-	document.images["rr"].src = "oranges/orange2.png";
-	document.images["rr"].alt = "Orange";
-	newsrc  = "peels/peel1.png";
-}
-}
-
-</script>
 <style>
 @import url('https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLUXza5VhXqVC6o75Eld_V98');
 html, body{
-
   font-family: Calibri, sans-serif;
 }
 .c4{margin-left:36pt}
 .c2{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify}
-
 .topleft{
   z-index:3;
   position: absolute;
@@ -56,37 +26,20 @@ html, body{
     position: absolute;
   z-index:3;
 }
-
 .scrolls{
   position: absolute;
   top: 0px;
   left: 200px;
   z-index:-1;
-
 }
-
 .pulls{
     position: absolute;
   z-index:2;
 }
-
 </style>
-
 </head>
-
 <body bgcolor="#4658bc">
-  <div class="topleft" onclick="myFunction();changeImage();"><img id="rr" src="oranges/orange2.png" height="50" width="50"></div>
-
-  <div id="myDIV">
-  <div class="random" id="r1"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
-  <div class="random" id="r2"><a href="http://inflexions.org/diversityindiversity/flcl/"><img src="oranges/orange2.png" height="100" width="100"></a></div>
-  <div class="random" id="r3"><a href="http://inflexions.org/diversityindiversity/The%20Extraordinary%20Adventures%20in%20Neurodiversity%20of%20Dougie%20Jones-1/"><img src="oranges/orange3.png" height="100" width="100"></a></div>
-  <div class="random" id="r4"><a href="http://inflexions.org/diversityindiversity/catzz.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
-  <div class="random" id="r5"><a href="http://inflexions.org/diversityindiversity/memos/index.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
-  <div class="random" id="r6"><a href="http://inflexions.org/diversityindiversity/memos/o%C9%AF%C7%9D%C9%AF%20pl%C9%B9o%CA%8D%20p%C7%9D%CA%87%C9%B9%C7%9D%CA%8Cu%E1%B4%89%20pu%C9%90%20uo%E1%B4%89%CA%87%C9%94%E1%B4%89%C9%9F%20%C7%9D%CA%8C%E1%B4%89%CA%87%C9%90ln%C9%94%C7%9Dds%20%C9%90.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
-  <div class="random" id="r7"><a href="http://inflexions.org/diversityindiversity/memos/relationshapes.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
-  </div>
-
+  <script type="text/javascript" src="js/oranges.js"></script>
 <br>
 <br>
 <br>

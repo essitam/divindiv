@@ -1,3 +1,4 @@
+var x = document.getElementById("myDIV");
 
 function myFunction() {
     var x = document.getElementById("myDIV");
