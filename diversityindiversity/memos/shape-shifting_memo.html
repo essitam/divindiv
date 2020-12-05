@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>diversity in diversity</title>
+<link rel="shortcut icon" href="oranges/orange2.png" />
 <style>
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  background-image: url('gifs/shape.gif');
+  background-size: cover;
+}
 #bg {
   position: fixed;
   top: 200;
@@ -21,68 +32,13 @@
 <script src="js/keyplay.js"></script>
 <script src="js/peel.js"></script>
 <link rel="stylesheet" type="text/css" href="css/soundbuttonrand.css">
-<script>
-var x = document.getElementById("myDIV");
-
-function myFunction() {
-	var x = document.getElementById("myDIV");
-	if (x.style.display == "block") {
-			x.style.display = "none";
-	} else {
-			x.style.display = "block";
-	}
-}
-
-
-var newsrc = "peels/peel1.png";
-
-function changeImage() {
-if ( newsrc == "peels/peel1.png" ) {
-document.images["rr"].src = "peels/peel1.png";
-document.images["rr"].alt = "Peel";
-newsrc  = "oranges/orange2.png";
-}
-else {
-document.images["rr"].src = "oranges/orange2.png";
-document.images["rr"].alt = "Orange";
-newsrc  = "peels/peel1.png";
-}
-}
-
-</script>
-
 </head>
 <body>
 
-  <div class="topleft" onclick="myFunction(); changeImage();"><img id="rr" src="oranges/orange2.png" height="40" width="40"></div>
+  <script type="text/javascript" src="js/oranges.js"></script>
 
-  <div id="myDIV">
-	<div class="random" id="r1"><a href="http://inflexions.org/diversityindiversity/memos/FUET-memo.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
-	<div class="random" id="r2"><a href="http://inflexions.org/diversityindiversity/memos/exploding-plastic-hands.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
-	<div class="random" id="r3"><a href="http://inflexions.org/diversityindiversity/memos/fabulation-and-fake-news.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
-	<div class="random" id="r4"><a href="http://inflexions.org/diversityindiversity/memos/nemo-memo.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
-	<div class="random" id="r5"><a href="http://inflexions.org/diversityindiversity/memos/izsafe.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
-	<div class="random" id="r6"><a href="http://inflexions.org/diversityindiversity/spaze2.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
-	<div class="random" id="r7"><a href="http://inflexions.org/diversityindiversity/memos/sparks-memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
-	<div class="random" id="r8"><a href="http://inflexions.org/diversityindiversity/memos/video_2_2.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
-	<div class="random" id="r9"><a href="http://inflexions.org/diversityindiversity/memos/zlip.html"><img src="oranges/orange1.png" height="100" width="100"></a></div>
-	<div class="random" id="r10"><a href="http://inflexions.org/diversityindiversity/memos/howtodiis4ppearcompletely0.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
-	<div class="random" id="r11"><a href="http://inflexions.org/diversityindiversity/memos/orange.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
-	<div class="random" id="r12"><a href="http://inflexions.org/diversityindiversity/memos/sparks-memo.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
-	<div class="random" id="r14 r"><a href="http://inflexions.org/diversityindiversity/memos/o%C9%AF%C7%9D%C9%AF%20pl%C9%B9o%CA%8D%20p%C7%9D%CA%87%C9%B9%C7%9D%CA%8Cu%E1%B4%89%20pu%C9%90%20uo%E1%B4%89%CA%87%C9%94%E1%B4%89%C9%9F%20%C7%9D%CA%8C%E1%B4%89%CA%87%C9%90ln%C9%94%C7%9Dds%20%C9%90.html"><img src="oranges/orange2.png" height="100" width="100"></a></div>
-	<div class="random" id="r15 r"><a href="http://inflexions.org/diversityindiversity/memos/shape-shifting_memo.html"><img src="oranges/orange3.png" height="100" width="100"></a></div>
-	<div class="random" id="r16 r"><a href="http://inflexions.org/diversityindiversity/memos/so-fa_bulouss.html"><img src="oranges/orange4.png" height="100" width="100"></a></div>
-	</div>
   <br><br><br>
   <img src="images/image1.png" id="bg" alt="">
 
-
-<style>
-body{
-  background-image: url('gifs/shape.gif');
-  background-size: cover;
-);
-}
-</style>
 </body>
 </html>

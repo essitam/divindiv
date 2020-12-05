@@ -29,7 +29,7 @@ for (const element of orangelink) {
   var orangea = document.createElement('a');
   orangea.setAttribute('href', element);
   var orangeimg = document.createElement('img');
-  var item = "http://inflexions.org/diversityindiversity/" + orangeslice.random()
+  var item = "http://inflexions.org/diversityindiversity/" + orangeslice.random();
   orangeimg.setAttribute('src', item);
   orangeimg.setAttribute('width', '100px');
   orangeimg.setAttribute('height', '100px');
